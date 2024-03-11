@@ -11,6 +11,11 @@ dns.setDefaultResultOrder('verbatim')
 
 const viteConfig: UserConfig = {
   plugins: [redwood()],
+  server: {
+    watch: {
+      usePolling: true
+    }
+  }
 }
 
 export default defineConfig(viteConfig)
